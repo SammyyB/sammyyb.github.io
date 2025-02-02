@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="changeColorBtn">Change Color</button>
+    <div class="resume-box">
+        <div class="resume" id="resume">
+            <div class="header">
+                <h1>BACCAY, SHERYLL ANNE MARIE</h1>
+                <p>Address: TAGUI CITY, METRO MANILA, PHILIPPINES</p>
+                <p>Contact No.: +639000000000</p>
+                <p>Email: 202311064@fit.edu.ph</p>
+            </div>
+            <div class="photo">
+                <img src="profile.jpg" alt="Profile Photo">
+            </div>
+            <hr>
+            <h2>OBJECTIVE:</h2>
+            <p>A dedicated BSIT Web and Mobile Application student with a passion for designing and developing
+                responsive websites and mobile applications. Skilled in HTML, CSS, JavaScript, and mobile development
+                frameworks, with a strong eagerness to learn and apply technical knowledge in real-world projects.
+                Seeking
+                opportunities to enhance expertise and contribute to innovative digital solutions.
+            </p>
+            
+            <h2>ACADEMIC BACKGROUND:</h2>
+            <p><strong>College:</strong> FEU Institute of Technology (2023 - Current)</p>
+            <p><strong>Senior High School:</strong> Senator Renato "Compañero" Cayetano Memorial Science and Technology Highschool (2021-2023)</p>
+            <p><strong>Junior High School:</strong> Senator Renato "Compañero" Cayetano Memorial Science and Technology Highschool (2017-2021)</p>
+            <p><strong>Elementary:</strong> Anne-Claire Montessori (2011-2017)</p>
+
+            <h2>SKILLS:</h2>
+            <ul>
+                <li>Web Development (HTML, CSS, JavaScript)</li>
+                <li>Programming (C++, Java, Python)</li>
+                <li>Photography</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        const button = document.getElementById("changeColorBtn");
+        const resume = document.getElementById("resume");
+        const colors = ["#ffcccc", "#ccffcc", "#ccccff", "#ffffcc", "#e0e0e0"];
+        let currentIndex = 0;
+        button.addEventListener("click", function () {
+            resume.style.backgroundColor = colors[currentIndex];
+            currentIndex = (currentIndex + 1) % colors.length;
+        });
+    </script>
+</body>
+</html>
