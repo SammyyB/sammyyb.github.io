@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <button id="changeColorBtn">Change Color</button>
+    <button id="changeColorBtn" class="btn" onclick="changeColorBtn()">Change Color</button>
     <div class="resume-box">
         <div class="resume" id="resume">
             <div class="header">
-                <div class="photo">
-                    <img src="picture.jpg" alt="Profile Photo">
-                </div>
                 <div class="info">
                     <h1>BACCAY, SHERYLL ANNE MARIE</h1>
-                    <p>Address: TAGUI CITY, METRO MANILA, PHILIPPINES</p>
-                    <p>Contact No.: +639000000000</p>
+                    <p>Address: Taguig City Metro Manila, Philippines</p>
+                    <p>Contact No.: +639496722456</p>
                     <p>Email: 202311064@fit.edu.ph</p>
+                </div>
+                <div class="photo">
+                    <img src="picture.jpg" alt="Profile Photo">
                 </div>
             </div>
             <hr>
@@ -26,8 +26,7 @@
             <p>A dedicated BSIT Web and Mobile Application student with a passion for designing and developing
                 responsive websites and mobile applications. Skilled in HTML, CSS, JavaScript, and mobile development
                 frameworks, with a strong eagerness to learn and apply technical knowledge in real-world projects.
-                Seeking
-                opportunities to enhance expertise and contribute to innovative digital solutions.</p>
+                Seeking opportunities to enhance expertise and contribute to innovative digital solutions.</p>
 
             <h2>ACADEMIC BACKGROUND:</h2>
             <p><strong>Senior High School:</strong> Senator Renato "Compañero" Cayetano Memorial Science and Technology
@@ -47,14 +46,18 @@
         </div>
     </div>
     <script>
-        const button = document.getElementById("changeColorBtn");
-        const resume = document.getElementById("resume");
-        const colors = ["#ffcccc", "#ccffcc", "#ccccff", "#ffffcc", "#e0e0e0"];
-        let currentIndex = 0;
-        button.addEventListener("click", function () {
-            resume.style.backgroundColor = colors[currentIndex];
-            currentIndex = (currentIndex + 1) % colors.length;
-        });
+        const bgColors = ["#ffcccc", "#ccffcc", "#ccccff", "#ffffcc", "#e0e0e0"];
+        const fontColors = ["#660000" , "#006600", "#000606", "#666600", "#333333"]
+        let c_index_bg = 0;
+        let c_index_font = 0;
+
+        function changeColorBtn() {
+            const resumeStyle = document.querySelector(".resume");
+            resumeStyle.style.backgroundColor = bgColors[c_index_bg];
+            resumeStyle.style.color = fontColors[c_index_font];
+            c_index_bg = (c_index_bg + 1) % bgColors.length;
+            c_index_font = (c_index_font + 1) % bgColors.length;
+        } 
     </script>
 </body>
 </html>
